@@ -1,12 +1,7 @@
 {
   "version": 2,
-  "buildCommand": "npm run build:all",
-  "outputDirectory": "dist",
-  "routes": [
-    { "src": "/storybook", "dest": "/storybook/index.html" },
-    { "src": "/storybook/(.*)", "dest": "/storybook-static/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
-  "functions": {},
-  "github": { "silent": true }
+  "buildCommand": "npm run build-storybook",
+  "outputDirectory": "storybook-static",
+  "cleanUrls": true,
+  "trailingSlash": false
 }
