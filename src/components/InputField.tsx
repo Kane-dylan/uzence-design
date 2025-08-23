@@ -11,6 +11,7 @@ type InputFieldProps ={
   invalid?: boolean;
   variant?: 'filled' | 'outlined' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
+  loading ?: boolean;
 }
 
 export const InputField = ({
@@ -22,6 +23,7 @@ export const InputField = ({
   errorMessage,
   disabled = false,
   invalid = false,
+  loading = false,
   variant = "outlined",
   size = "md",
 }: InputFieldProps) => {
@@ -39,15 +41,28 @@ export const InputField = ({
   };
 
   return (
-    <div>
-      {label}
+    <div className="flex flex-col gap-1 w-full">
+      {label && <label className="flex items-center justify-between gap-2 text-sm font-medium">{label}
+
+      {loading && (
+        <div className="right-2 top-1/2 -translate-y-1/2">
+          <div className="h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        </div>
+      )}
+      </label>}
+
       <input
         value={value}
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
 
-        className={`flex flex-row items-center max-h-screen rounded-xl outline-none ${sizeClasses[size]} ${variantClasses[variant]}`}
+        className={`w-full rounded-xl outline-none transition-all pr-8 
+          ${sizeClasses[size]} 
+          ${variantClasses[variant]}
+          ${disabled ? "opacity-50 cursor-not-allowed" : ""}
+          ${invalid ? "border-red-500 text-red-600" : ""}
+          `}
         type="text" />
 
       {invalid && errorMessage ? (
