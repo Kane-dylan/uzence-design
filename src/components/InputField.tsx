@@ -68,11 +68,11 @@ export const InputField = ({
   };
 
   return (
-    <div className="flex flex-col gap-1 w-full">
+    <div className="flex flex-col gap-1 max-w-1/2">
       {label && <label className="flex items-center justify-between text-md font-medium">{label}
 
       {loading && (
-        <div className="right-2 top-1/2 -translate-y-1/2">
+        <div className="right-2 top-1/2">
           <div className="h-4 w-4 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         </div>
       )}
