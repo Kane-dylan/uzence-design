@@ -23,7 +23,8 @@ export const Button = ({
     <button
       onClick={onClick}
       style={{ backgroundColor }}
-      className={`inline-flex items-center justify-center font-medium text-white rounded border-none hover:opacity-90 transition ${sizeClasses[size]}`}
+      className={`inline-flex items-center justify-center font-medium text-white rounded border-none hover:opacity-90 transition
+        ${sizeClasses[size]}`}
     >
       {label}
     </button>
