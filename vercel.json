@@ -1,8 +1,12 @@
 {
-  "builds": [
-    { "src": "package.json", "use": "@vercel/static-build" }
-  ],
+  "version": 2,
+  "buildCommand": "npm run build:all",
+  "outputDirectory": "dist",
   "routes": [
-    { "src": "/(.*)", "dest": "/storybook-static/$1" }
-  ]
+    { "src": "/storybook", "dest": "/storybook/index.html" },
+    { "src": "/storybook/(.*)", "dest": "/storybook-static/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "functions": {},
+  "github": { "silent": true }
 }
