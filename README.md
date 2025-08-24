@@ -5,9 +5,11 @@
 
 ## 🛠 Tech Stack
 
-React 19 • TypeScript • Vite 7 • Storybook 9 • Tailwind CSS 4 • ESLint / typescript-eslint
+React 19 • TypeScript • Vite 7 • Storybook 9 • Tailwind CSS 4 
 
-Made with </> using Vite & Storybook.
+---
+
+
 
 
 ## 🗂 Folder Structure
@@ -35,6 +37,10 @@ uzence-design/
 ```
 
 ## 🚀 Getting Started
+
+---
+
+
 
 ### 1. Install dependencies
 
@@ -72,6 +78,10 @@ npm run preview
 ```
 
 ## 🧩 Components Overview
+
+---
+
+
 
 ### InputField
 
@@ -128,10 +138,24 @@ const columns: Column<Person>[] = [
 />;
 ```
 
+## 👁️ Preview
+<img src="./public/InputField.png"/>
+<img src="./public/DataTable.png"/>
+
+
+
 ## 📝 Description of My Approach
+
+---
+
+
 
 For  **Component 1 (InputField)** , I focused on making a reusable input that can handle different states and styles. I started by defining clear props (`label`, `placeholder`, `errorMessage`, etc.) so the component is flexible. I used Tailwind classes to manage **sizes** (`sm`, `md`, `lg`) and **variants** (`filled`, `outlined`, `ghost`). I also added state handling for  **disabled** ,  **invalid** , and **loading** (showing a spinner near the label). Extra features like  **clear button** make the component feel more practical. This helped me understand how to combine TypeScript types with React props to keep things strongly typed.
 
 For  **Component 2 (DataTable)** , my idea was to create a generic table that works with any type of data. I used a `columns` config to define how data should be displayed, instead of hardcoding. Sorting is done by clicking on column headers if `sortable` is true. Row selection is supported through checkboxes (single or multiple), and I call back the parent with the selected rows. I also added **loading** and **empty state** handling so the table feels complete.
 
 During this, I learned how to use **TypeScript generics** (`<T>`) to make the table reusable for any dataset. I referred to React and TypeScript documentation and also used AI tools for guidance while building the components..
+
+---
+
+Made with </> using Vite & Storybook.
